@@ -443,7 +443,7 @@ class KruskalMaze extends World {
   }
 
   // Traces the direct path from the end, back to the start
-  // of the maze.
+  // of the maze
   void traceback() {
 
     this.goal = this.goal.previous;
