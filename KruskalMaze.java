@@ -1,3 +1,9 @@
+import tester.*;
+import javalib.impworld.*;
+import java.awt.Color;
+import javalib.worldimages.*;
+import java.util.*;
+
 // Represents the visualization of a maze
 // constructed using Kruskal's algorithm.
 class KruskalMaze extends World {
