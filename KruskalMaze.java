@@ -386,16 +386,18 @@ class KruskalMaze extends World {
     makeMaze();
   }
 
-  // We have reached the end, signal to trace back.
+   // We have reached the end, signal to trace back.
   void reachedEnd() {
     Cell cur = this.searchPath.remove(0);
     cur.color = Color.cyan;
 
-    if (this.goal.left && this.cellBoard.get(goal.x - 1).get(goal.y) != null) {
+    if (this.goal.left && this.cellBoard.get(goal.x - 1).get(goal.y) != null
+        && this.cellBoard.get(goal.x - 1).get(goal.y).color == Color.cyan) {
       this.goal.previous = this.cellBoard.get(goal.x - 1).get(goal.y);
     }
 
-    else if (this.goal.up && this.cellBoard.get(goal.x).get(goal.y - 1) != null) {
+    else if (this.goal.up && this.cellBoard.get(goal.x).get(goal.y - 1) != null
+        && this.cellBoard.get(goal.x).get(goal.y - 1).color == Color.cyan) {
 
       this.goal.previous = this.cellBoard.get(goal.x).get(goal.y - 1);
     }
